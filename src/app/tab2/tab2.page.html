@@ -10,14 +10,5 @@
 </ion-header>
 
 <ion-content>
-    <div class="list-no-border">
-        <ion-item *ngFor="let item of places.nearby" tappable (click)="searchBy(item)">
-          <ion-icon name="md-locate" item-left color="primary"></ion-icon>
-          <span ion-text color="primary">{{ item.name }}</span>
-        </ion-item>
-        <ion-item *ngFor="let item of places.recent" tappable (click)="searchBy(item)">
-          <ion-icon name="md-time" item-left color="primary"></ion-icon>
-          <span ion-text color="primary">{{ item.name }}</span>
-        </ion-item>
-      </div>
+    
 </ion-content>
