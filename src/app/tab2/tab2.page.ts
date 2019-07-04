@@ -6,7 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
-
+  public recommendedL: Array<any> = [];
+  public hasRecommendations: boolean = this.recommendedL.length>0;
   constructor() {}
 
 }

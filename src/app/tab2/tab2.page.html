@@ -9,6 +9,9 @@
 
 </ion-header>
 
-<ion-content>
-    
-</ion-content>
+<ion-list *ngIf = "hasRecommendations">
+    <ion-item *ngFor = "let item of items"></ion-item>
+    <div>
+      {{item.name}}
+    </div>
+  </ion-list>

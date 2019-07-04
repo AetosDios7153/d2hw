@@ -6,14 +6,23 @@
   </ion-toolbar>
   <ion-toolbar padding color="light">
     <p ion-text no-margin class="text-white">
-      <strong>0</strong> results found!
+      <strong>{{trips.length}}</strong> results found!
     </p>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content> 
+  <ion-card *ngIf = "!hasTrips">
   <ion-item>You don't have any trips yet</ion-item>
-  <ion-button href="./tabs/tab2">
+  <ion-button (click)="go()">
     Explore New Adventures
-  </ion-button>
+  </ion-button></ion-card>
+  <ion-card *ngIf = "hasTrips">
+      <ion-list>
+          <ion-item *ngFor = "let item of trips"></ion-item>
+          <div>
+            {{item.name}}
+          </div>
+        </ion-list>
+  </ion-card>
 </ion-content>

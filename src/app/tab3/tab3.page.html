@@ -19,7 +19,20 @@
       Toggle Infinite Scroll
     </ion-button>
   
-    <ion-list></ion-list>
+    <ion-list *ngIf = "hasM; else displayNoMsg">
+        <ion-item *ngFor = "let item of Msgs"></ion-item>
+        <div>
+          {{item.name}}
+        </div>
+    </ion-list>
+    <ng-template #displayNoMsg>
+       <div class="ion-text-center">
+        <h3>
+          Use the "add" button to start a new message!
+        </h3>
+        </div>
+      </ng-template>
+
   
     <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
       <ion-infinite-scroll-content

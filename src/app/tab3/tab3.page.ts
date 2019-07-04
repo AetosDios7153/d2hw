@@ -6,7 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['tab3.page.scss']
 })
 export class Tab3Page {
-
+  public Msgs:Array<any> =[];
+  public hasM :boolean = this.Msgs.length >0;
   constructor() {}
 
 }
